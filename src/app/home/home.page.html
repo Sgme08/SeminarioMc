@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header> 
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <swiper-container
+   [initialSlide]="0"
+   [slidesPerView]="2"
+  > 
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <swiper-slide>
+      <h1 class="my-favoryte-text-color">TITULO 1</h1>
+      hola slide 1 
+      <img src = "https://www.xtrafondos.com/wallpapers/escandalosos-somos-osos-3432.jpg">
+      <ion-icon class="slide-icon"  name="paw-outline"></ion-icon>
+      <P>Hola soy la explicacion del slide, Hola soy la explicacion del slide</P>
+
+    </swiper-slide>
+
+    <swiper-slide>
+      <h1>TITULO2</h1>
+      hola slide 2
+      <img src = "assets/img/img1.jpg">
+      <P class="my-favoryte-text-color">Hola soy la explicacion del slide, Hola soy la explicacion del slide</P>
+    </swiper-slide>
+
+    <swiper-slide>
+      <h1>TITULO 3</h1>
+      hola slide 3
+      <img src = "https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2015/08/escandalosos-pardo-panda-polar.jpg?fit=2670%2C1505&ssl=1">
+      <ion-icon name="paw-outline"></ion-icon>
+      <P>Hola soy la explicacion del slide, Hola soy la explicacion del slide</P>
+
+    </swiper-slide>
+
+    <swiper-slide>
+      <h1>TITULO4</h1>
+      hola slide 4
+      <img src = "https://www.zjuegosgratis.com/wp-content/uploads/2019/07/Escandalosos.jpg">
+      <P>Hola soy la explicacion del slide, Hola soy la explicacion del slide</P>
+    </swiper-slide>
+
+  </swiper-container>
 </ion-content>
