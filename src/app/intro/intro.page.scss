@@ -1,0 +1,49 @@
+.slide-icon {
+    font-size: 25px;
+    color: #a9159c;
+  }
+  
+  .my-favorite-text-color {
+  color:(--my-favorite-color);
+  }
+  
+  //actividad 1 
+  
+  .type_font {
+    color: pink;
+    font-size: 15px;   
+    font-family:'Tahoma';
+    
+  }
+  
+  .img {
+    width: 97%;
+    height: 210px;
+    display: flex;
+  }
+  
+  // clase 2 
+  
+  h1 {
+    color: var(--ion-color-primary);
+  }
+  
+  p {
+    font-size: var(--my-favorite-font-size);
+  }
+  ion-content {
+    --background: red;
+  
+  }
+  .close-icon {
+    font-size: 40px;
+    color: #000000;
+    float: right;
+    margin-right:10px ;
+    margin-top: 10px;
+    position: absolute;
+    z-index:100 ;
+    right:0;
+
+
+  }

@@ -1,8 +1,26 @@
+<!--<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>intro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">intro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
 <ion-header> </ion-header>
 
 <ion-content>
-<!---- <swiper-container [initialSlide]="0" [slidesPerView]="1" [speed]="400">
-   <!-- <swiper-slide>
+  <ion-icon name ="close" class="close-icon" (click)="final()"></ion-icon>
+
+  <swiper-container 
+   [initialSlide]="0" 
+   [slidesPerView]="1" 
+   [speed]="400">
+    <!-- <swiper-slide>
       <h1 class="my-favorite-text-color">ESCANDALOSOS</h1>
       Cartoon network
       <img class="img"
@@ -62,16 +80,13 @@
     </swiper-slide>
   -->
   
- <!---- <swiper-slide *ngFor="let slide of slides">
-    <h1 class="my-favorite-text-color">{{slide.titulo}}</h1>
-    <img class="img" src={{slide.img}}/>
-    <ion-icon class="slide-icon" name="{{slide.icon}}"></ion-icon>
-    <p>{{slide.description}}</p>
-  </swiper-slide>
+   <swiper-slide *ngFor="let slide of slides">
+     <h1 class="my-favorite-text-color">{{slide.titulo}}</h1>
+      <img class="img" src={{slide.img}}/>
+      <ion-icon class="slide-icon" name="{{slide.icon}}"></ion-icon>
+      <p>{{slide.description}}</p>
+   </swiper-slide>
 
-
-</swiper-container> -->
-
-Hola soy home 
+  </swiper-container>
 </ion-content> 
 
