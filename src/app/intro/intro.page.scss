@@ -20,6 +20,9 @@
     width: 97%;
     height: 210px;
     display: flex;
+    border-radius: var(--boder-img); //usando segunda variable(actividad 2) 
+    border: var(--boder-color); //usando tercera variable(actividad 2)
+    border-color: var(--ion-color-tertiary); //usando variables predeterminada de ionic(actividad 2)
   }
   
   // clase 2 
@@ -30,14 +33,17 @@
   
   p {
     font-size: var(--my-favorite-font-size);
-  }
+    color: var(--color-text); //usando primera variable(actividad 2)
+  }  
+
   ion-content {
     --background: red;
-  
-  }
+  } 
+ 
   .close-icon {
     font-size: 40px;
-    color: #000000;
+
+    color: var(--ion-color-warning-contrast); //usando variables predeterminada de ionic(actividad 2)
     float: right;
     margin-right:10px ;
     margin-top: 10px;
