@@ -12,11 +12,18 @@ export class IntroGuard implements CanActivate {
   constructor(private storage: Storage, private router: Router) {
 
   }
-  canActivate() {
-
-    console.log("paso por seguridad");
-    this.router.navigateByUrl("/intro")
-    return false;
+    async canActivate() {
+      const isIntroShowed = await this.storage.get('introShow');
+      console.log(isIntroShowed);
+      if (isIntroShowed){
+        return true;
+      }else {
+         this.router.navigateByUrl("/intro");
+         return false;
+      }
+    //console.log("paso por seguridad");
+    //this.router.navigateByUrl("/intro")
+    //return false;
 
   }
   
