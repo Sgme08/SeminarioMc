@@ -1,54 +1,70 @@
+
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+<ion-content class="ejemplo">
+  <ion-grid class="background-image">
+    <ion-row class="ion-align-items-end">
+      <ion-col>
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
 
-   <ion-item>
-    <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
-   </ion-item>
 
-   <div class="validation-erros">
-    <ng-container *ngFor="let validation of validation_message.email">
-    
-      <div *ngIf="(
-        loginForm.get('email')?.hasError(validation.type) && 
-        loginForm.get('email')?.dirty ),
-        ">
+          <ion-item>
+            <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
+          </ion-item>
+       
+          <div class="validation-erros">
+           <ng-container *ngFor="let validation of validation_message.email">
+           
+             <div *ngIf="(
+               loginForm.get('email')?.hasError(validation.type) && 
+               loginForm.get('email')?.dirty ),
+               ">
+       
+               {{validation.message}}
+               
+             </div>
+       
+           </ng-container>
+          </div>
+          <br>
+       
+          <ion-item>
+           <ion-input label="Password" labelPlacement="floating" placeholder="*********" formControlName="Password" type="password"></ion-input>
+          </ion-item>
+       
+          <div class="validation-erros">
+           <ng-container *ngFor="let validation of validation_message.Password">
+           
+             <div *ngIf="(
+               loginForm.get('Password')?.hasError(validation.type) && 
+               loginForm.get('Password')?.dirty ) 
+               ">
+       
+               {{validation.message}}
+               
+             </div>
+       
+           </ng-container>
+          </div>
 
-        {{validation.message}}
+          <br>
+       
+          <ion-button expand="full" shape="round" color="success" type="submit" [disabled]="!loginForm.valid">
+           Ingresar
+          </ion-button>
+       
+         </form>
         
-      </div>
 
-    </ng-container>
-   </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-   <ion-item>
-    <ion-input label="Password" labelPlacement="floating" placeholder="*********" formControlName="Password" type="password"></ion-input>
-   </ion-item>
-
-   <div class="validation-erros">
-    <ng-container *ngFor="let validation of validation_message.Password">
-    
-      <div *ngIf="(
-        loginForm.get('Password')?.hasError(validation.type) && 
-        loginForm.get('Password')?.dirty ) 
-        ">
-
-        {{validation.message}}
-        
-      </div>
-
-    </ng-container>
-   </div>
-
-   <ion-button expand="full" shape="round" color="success" type="submit" [disabled]="!loginForm.valid">
-    Ingresar
-   </ion-button>
-
-  </form>
+ 
 </ion-content>
  
