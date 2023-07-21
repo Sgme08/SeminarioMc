@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { AuthenticateService } from '../services/authenticate.service';
+import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +22,15 @@ export class LoginPage implements OnInit {
       {type: "pattern" , message: "Debe poner un password valido"} //message agg
     ]
   }
-  constructor(private formBuilder: FormBuilder){ 
+errorMessages: string = "";
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthenticateService,
+    private navCtrl: NavController,
+    private storage: Storage
+    ){ 
+
     this.loginForm = this.formBuilder.group(
       {
         email: new FormControl( 
@@ -46,6 +57,20 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  loginUser(credentials: any){
+    console.log(credentials);
+    this.authService.loginUser(credentials).then(res => {
+      this.errorMessages = "";
+      this.storage.set ("isUserLoggedIn", true);
+      this.navCtrl.navigateForward("/home");
+
+    }).catch(err =>{
+      this.errorMessages = err;
+      console.log(this.errorMessages);
+    })
+
   }
 
 }
