@@ -72,5 +72,10 @@ errorMessages: string = "";
     })
 
   }
+  goToRegister(){
+    this.navCtrl.navigateForward("/register")
+  }
+
+ 
 
 }

@@ -1,28 +1,11 @@
 
-/* Clases agg*/
-ion-header{
-  background-color: #38b1b040;
-}
- 
-ion-title {
-font-size:20px;
-color: rgb(245, 38, 159);
-}
-.ng-invalid:not(form)  {
-    border-left: 5px solid #fc0a32; /* red */
-  }
+/* .ng-invalid:not(form)  {
+    border-left: 2px solid #fc0a32; red 
+    }*/
+  
 
 .validation-erros { 
   color: rgb(234, 13, 13);
-
-}
-
-ion-grid{
-
-  margin-left: -50px;
-  margin-top: 169px;
-  margin-right: -50px;
-  background-color: rgb(9, 219, 205);
 }
 
 ion-button{
@@ -31,20 +14,26 @@ ion-button{
 
 
 .background-image {
-  background-image: url('/assets/img/img2.jpg'); 
+  background-image: url('/assets/img/img2.png'); 
   background-size: cover;
   background-position: center;
- // z-index: -1; 
 }
 
-.ejemplo {
-  --background-color: pink;
+.login-container {
+  max-width: 350px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ // background-color: rgba(234, 13, 13, 0.8); /* Fondo semi-transparente para el contenedor del formulario */
 }
 
-form, input, optgroup, select {
-  margin: 100px;
-  padding: 5px;
-  font: inherit;
-  color: inherit;
+.cont{
+  --background: var(--ion-background-color, #000000);
 }
+
+
+
+
+
   
