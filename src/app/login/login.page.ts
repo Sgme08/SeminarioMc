@@ -64,7 +64,7 @@ errorMessages: string = "";
     this.authService.loginUser(credentials).then(res => {
       this.errorMessages = "";
       this.storage.set ("isUserLoggedIn", true);
-      this.navCtrl.navigateForward("/home");
+      this.navCtrl.navigateForward("/menu/home");
 
     }).catch(err =>{
       this.errorMessages = err;
