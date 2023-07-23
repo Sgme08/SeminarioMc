@@ -8,30 +8,32 @@
   color: rgb(234, 13, 13);
 }
 
-ion-button{
-  margin-left: 0px;
+.background-images {
+  //  --background-image: url('/assets/img/img3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    --background: var(url('/assets/img/img2.jpg'));
+
+  }
+
+.myformulario{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
-
-.background-image {
-  background-image: url('/assets/img/img2.png'); 
-  background-size: cover;
-  background-position: center;
+.validation-erros{
+  color: red;
 }
 
-.login-container {
-  max-width: 350px;
-  margin: 100px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
- // background-color: rgba(234, 13, 13, 0.8); /* Fondo semi-transparente para el contenedor del formulario */
+.myitems{
+  color: white;
 }
 
-.cont{
-  --background: var(--ion-background-color, #000000);
+.myboton{
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
 
 
 

@@ -5,11 +5,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="cont">
-  <div class="login-container" >
-    <form class="background-image" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value) ">
+<ion-content class="background-images">
+    <form class="myformulario" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value) ">
   
-      <ion-item>
+      <ion-item class="myitems">
         <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email" ></ion-input>
       </ion-item>
   
@@ -29,7 +28,7 @@
       
       <br>
       
-      <ion-item>
+      <ion-item class="myitems">
         <ion-input label="Password" labelPlacement="floating" placeholder="*********" formControlName="Password" type="password" ></ion-input>
       </ion-item>
       
@@ -53,11 +52,10 @@
       </ion-button>
     </form>
     <ion-footer>
-      <ion-button expand="full" shape="round" color="success" (click)="goToRegister()" >
+      <ion-button class="myboton" expand="full" shape="round" color="success" (click)="goToRegister()" >
         Registro
       </ion-button>
     </ion-footer>
-  </div>
 
  
 </ion-content>

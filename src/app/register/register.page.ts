@@ -10,6 +10,28 @@ import { NavController } from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
   registerForm: FormGroup;
+
+  validation_messages = {
+
+    name:[
+      {type:"required", message:"El nombre es requerido"},
+      {type:"minLength", message:"El nombre debe tener minimo 2 caracteres"}
+    ],
+    last_name:[
+      {type:"required", message:"El Apellido es requerido"},
+      {type:"minLength", message:"El Apellido debe tener minimo 2 caracteres"}
+    ],
+
+
+    email:[
+      {type: "required" , message: "El email es obligatorio"},
+      {type: "pattern" , message: "Debe poner un email valido"}
+    ],
+    Password:[
+      {type: "required" , message: "El password es obligatorio"}, //message agg
+      {type: "pattern" , message: "Debe poner un password valido"} //message agg
+    ]
+  }
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthenticateService,
@@ -22,7 +44,7 @@ export class RegisterPage implements OnInit {
           Validators.compose(
             [
              Validators.required,
-             Validators.maxLength(10) //validaror1
+             Validators.minLength(2) //validaror1
             ]
           )
         ),
@@ -31,7 +53,7 @@ export class RegisterPage implements OnInit {
           Validators.compose(
             [
              Validators.required,
-             Validators.maxLength(10) //validaror1
+             Validators.minLength(2) //validaror1
             ]
           )
         ),
@@ -60,8 +82,10 @@ export class RegisterPage implements OnInit {
 
 
   ngOnInit() {
+    
   }
   goToLogin (){
+    this.navCtrl.navigateBack("/login") //volver al login(punto1)
     console.log("volver")
   }
   registerUser(UserData:any) {
@@ -70,5 +94,7 @@ export class RegisterPage implements OnInit {
       this.navCtrl.navigateBack("/login");
     })
   }
+
+
 
 }
