@@ -5,11 +5,12 @@ import * as listArtists from './artists.json'
   providedIn: 'root'
 })
 export class MusicService {
+  urlServer = "https://musicback.fly.dev"
 
   constructor() { }
 
   getArtists(){
-    return fetch ("https://musicback.fly.dev/artists").then(
+    return fetch (`${this.urlServer}/artists`).then(
       response => response.json()
     );
   }
@@ -17,4 +18,11 @@ export class MusicService {
   getArtistsFromJson(){
     return listArtists;
   }
+
+  getArtistsTracks(artist_id: number){
+    return fetch (`${this.urlServer}/tracks/artist/${artist_id}`).then(
+      response => response.json()
+    )
+  }
 }
+
