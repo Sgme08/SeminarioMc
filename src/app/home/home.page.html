@@ -9,6 +9,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-header>
+<ion-content>
+  <h1>Artistas</h1>
+  <swiper-container 
+  [initialSlide]="0"
+   [slidesPerView]="3"
+   *ngIf ="artists?.length > 0"
+   >
+    <swiper-slide *ngFor="let artist of artists">
+      <ion-avatar (click)="showSongs(artist)">
+        <img src="{{artist.image}}">
+        <span>{{artist.name}}</span>
+      </ion-avatar>
+    </swiper-slide>  
+  </swiper-container>
+</ion-content>
 
-</ion-header>
+
+   
