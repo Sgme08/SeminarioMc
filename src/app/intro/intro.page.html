@@ -1,91 +1,20 @@
-<!--<ion-header [translucent]="true">
+
+<ion-header [translucent]="true" class="myheader"> 
   <ion-toolbar>
-    <ion-title>intro</ion-title>
+    <ion-icon name ="close" class="myicon" (click)="final()"></ion-icon> <ion-title>Galeria</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">intro</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content> -->
-<ion-header> 
-</ion-header>
-
-<ion-content>
-  <ion-icon name ="close" class="close-icon" (click)="final()"></ion-icon>
+<ion-content class="mycont">
+  
 
   <swiper-container 
    [initialSlide]="0" 
    [slidesPerView]="1" 
    [speed]="400">
-    <!-- <swiper-slide>
-      <h1 class="my-favorite-text-color">ESCANDALOSOS</h1>
-      Cartoon network
-      <img class="img"
-        src="https://www.xtrafondos.com/wallpapers/escandalosos-somos-osos-3432.jpg"
-      />
-      <ion-icon class="slide-icon" name="paw-outline"></ion-icon>
-      <p>
-        Es una comedia protagonizada por tres hermanos osos, Pardo, Panda y
-        Polar
-      </p>
-    </swiper-slide>
 
-    <swiper-slide>
-      <h1>PARDO</h1>
-      <img class="img"
-        src="https://pm1.aminoapps.com/6531/9b7d4ab44e968239e1be1f3f5cc5d48422dd6998_00.jpg"
-      />
-      <p>
-        Es el líder de los tres y es visto como tal. Hace todo lo posible para
-        hacer lo correcto tanto para el beneficio de su familia como para él
-        mismo, pero a veces puede dejarse llevar. Al crecer sin padres o
-        tutores, al igual que sus hermanos adoptivos, creció tratando de ser un
-        hermano mayor modelo.
-      </p>
-    </swiper-slide>
-
-    <swiper-slide>
-      <h1>PANDA</h1>
-      <img class="img"
-        src="https://pm1.aminoapps.com/6350/1e3c8435060b82a27b1b721741a5bbcd624d11d7_00.jpg"
-      />
-      <p>
-        Él es el hermano del medio y, como dijo Pardo, es el vínculo que los
-        mantiene unidos. Parece ser el más delicado del trío, estando ansioso y,
-        como también describió Pardo, lindo. Aun así, se preocupa por sus
-        hermanos y tratará de ayudar cuando y como pueda
-      </p>
-    </swiper-slide>
-
-    <swiper-slide>
-      <h1>POLAR</h1>
-      <img class="img"
-        src="https://i.pinimg.com/736x/82/db/7b/82db7bc989e554665cae1125abf7a7c6.jpg"
-      />
-      <p>
-        es sin duda el más fuerte y en algunos aspectos es el más maduro de
-        ellos. Pudo rescatar a sus hermanos mayores de una muerte segura sin
-        demasiados problemas y se apresura a entrar en acción si encuentra que
-        surge una amenaza. Se preocupa mucho por sus dos hermanos.
-      </p>
-    </swiper-slide>
-
-    <swiper-slide>
-      <h1 class="type_font">FMY</h1>
-      <img class="img" src="assets/img/img1.jpg" />
-      <ion-icon class="slide-icon" name="paw-outline"></ion-icon>
-    </swiper-slide>
-  -->
-  
    <swiper-slide *ngFor="let slide of slides">
-     <h1 class="my-favorite-text-color">{{slide.titulo}}</h1>
       <img class="img" src={{slide.img}}/>
-      <ion-icon class="slide-icon" name="{{slide.icon}}"></ion-icon>
-      <p>{{slide.description}}</p>
    </swiper-slide>
 
   </swiper-container>
