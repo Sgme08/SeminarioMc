@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons>
-      <ion-button (click)="goToLogin()">
-        Atras
+    <ion-buttons >
+      <ion-button class="myicoon" (click)="goToLogin()">
+        <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title > Registro </ion-title>
+    <ion-title class="myregis"> Registro </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -89,7 +89,7 @@
 
 
 
-      <ion-button  type="submit" [disabled]="!registerForm.valid" expand="full">
+      <ion-button  type="submit" [disabled]="!registerForm.valid" expand="full" color="success" shape="round">
         Registrarse
       </ion-button>
 
